@@ -1,0 +1,26 @@
+<div class="tables">
+  <h4>List of Permission</h4>
+  <div class="col-sm-12 tableheadbody">
+    <a class="waves-effect waves-light black btn" routerLink="new" style="float:right;">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Permission Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let permission of permission">
+        <th scope="row">{{permission.id}}</th>
+        <td>{{permission.name}}</td>
+        <td><a>Edit</a></td>
+        <td><a>Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
