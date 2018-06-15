@@ -41,6 +41,79 @@ import { RolenewComponent } from './dashboard/roles/rolenew/rolenew.component';
 import { RoleServiceService } from './dashboard/roles/role-service.service';
 import { PermissionListComponent } from './dashboard/permission/permission-list/permission-list.component';
 import { PermissionNewComponent } from './dashboard/permission/permission-new/permission-new.component';
+import { AcadmicYearListComponent } from './dashboard/acadmicyear/acadmic-year-list/acadmic-year-list.component';
+import { AcadmicYearFormComponent } from './dashboard/acadmicyear/acadmic-year-form/acadmic-year-form.component';
+import { AdmissionListComponent } from './dashboard/admission/admission-list/admission-list.component';
+import { AdmissionFormComponent } from './dashboard/admission/admission-form/admission-form.component';
+import { AdmissionTypeListComponent } from './dashboard/admission-types/admission-type-list/admission-type-list.component';
+import { AdmissionTypeFormComponent } from './dashboard/admission-types/admission-type-form/admission-type-form.component';
+import { CastListComponent } from './dashboard/cast/cast-list/cast-list.component';
+import { CastFormComponent } from './dashboard/cast/cast-form/cast-form.component';
+import { CategoryListComponent } from './dashboard/category/category-list/category-list.component';
+import { CategoryFormComponent } from './dashboard/category/category-form/category-form.component';
+import { CountryListComponent } from './dashboard/country/country-list/country-list.component';
+import { CountryFormComponent } from './dashboard/country/country-form/country-form.component';
+import { DistrictListComponent } from './dashboard/district/district-list/district-list.component';
+import { DistrictFormComponent } from './dashboard/district/district-form/district-form.component';
+import { DivisionListComponent } from './dashboard/division/division-list/division-list.component';
+import { DivisionFormComponent } from './dashboard/division/division-form/division-form.component';
+import { InstituteListComponent } from './dashboard/institudes/institute-list/institute-list.component';
+import { InstituteFormComponent } from './dashboard/institudes/institute-form/institute-form.component';
+import { OcupationListComponent } from './dashboard/ocupation/ocupation-list/ocupation-list.component';
+import { OcupationFormComponent } from './dashboard/ocupation/ocupation-form/ocupation-form.component';
+import { RelitionListComponent } from './dashboard/relition/relition-list/relition-list.component';
+import { RelitionFormComponent } from './dashboard/relition/relition-form/relition-form.component';
+import { SansthaListComponent } from './dashboard/sanstha/sanstha-list/sanstha-list.component';
+import { SansthaFormComponent } from './dashboard/sanstha/sanstha-form/sanstha-form.component';
+import { SchoolListComponent } from './dashboard/school/school-list/school-list.component';
+import { SchoolFormComponent } from './dashboard/school/school-form/school-form.component';
+import { SchoolcastListComponent } from './dashboard/school-castes/schoolcast-list/schoolcast-list.component';
+import { SchoolcastFormComponent } from './dashboard/school-castes/schoolcast-form/schoolcast-form.component';
+import { SchoolCategoryListComponent } from './dashboard/school-categories/school-category-list/school-category-list.component';
+import { SchoolCategoryFormComponent } from './dashboard/school-categories/school-category-form/school-category-form.component';
+import { SchoolReligionListComponent } from './dashboard/school-religions/school-religion-list/school-religion-list.component';
+import { SchoolReligionFormComponent } from './dashboard/school-religions/school-religion-form/school-religion-form.component';
+import { SchoolSectionListComponent } from './dashboard/school-sections/school-section-list/school-section-list.component';
+import { SchoolSectionFormComponent } from './dashboard/school-sections/school-section-form/school-section-form.component';
+import { SchoolSubcastListComponent } from './dashboard/school-subcastes/school-subcast-list/school-subcast-list.component';
+import { SchoolSubcastFormComponent } from './dashboard/school-subcastes/school-subcast-form/school-subcast-form.component';
+import { SectionListComponent } from './dashboard/section/section-list/section-list.component';
+import { SectionFormComponent } from './dashboard/section/section-form/section-form.component';
+import { StatesListComponent } from './dashboard/states/states-list/states-list.component';
+import { StatesFormComponent } from './dashboard/states/states-form/states-form.component';
+import { SubCastListComponent } from './dashboard/subcast/sub-cast-list/sub-cast-list.component';
+import { SubCastFormComponent } from './dashboard/subcast/sub-cast-form/sub-cast-form.component';
+import { TalukaListComponent } from './dashboard/taluka/taluka-list/taluka-list.component';
+import { TalukaFormComponent } from './dashboard/taluka/taluka-form/taluka-form.component';
+import { UserListComponent } from './dashboard/users/user-list/user-list.component';
+import { UserFormComponent } from './dashboard/users/user-form/user-form.component';
+import { AcadmicYearService } from './dashboard/acadmicyear/acadmic-year.service';
+import { AdmissionService } from './dashboard/admission/admission.service';
+import { AdmissionTypeService } from './dashboard/admission-types/admission-type.service';
+import { CastService } from './dashboard/cast/cast.service';
+import { CategoryService } from './dashboard/category/category.service';
+import { CountryService } from './dashboard/country/country.service';
+import { DistrictService } from './dashboard/district/district.service';
+import { DivisionService } from './dashboard/division/division.service';
+import { InstitudesService } from './dashboard/institudes/institudes.service';
+import { OcupationService } from './dashboard/ocupation/ocupation.service';
+import { RelitionService } from './dashboard/relition/relition.service';
+import { SansthaService } from './dashboard/sanstha/sanstha.service';
+import { SchoolService } from './dashboard/school/school.service';
+import { SchoolCastService } from './dashboard/school-castes/school-cast.service';
+import { SchoolCategoriesService } from './dashboard/school-categories/school-categories.service';
+import { SchoolReligionsService } from './dashboard/school-religions/school-religions.service';
+import { SchoolSectionService } from './dashboard/school-sections/school-section.service';
+import { SchoolsubCastesService } from './dashboard/school-subcastes/schoolsub-castes.service';
+import { SectionService } from './dashboard/section/section.service';
+import { StatesService } from './dashboard/states/states.service';
+import { SubcastService } from './dashboard/subcast/subcast.service';
+import { TalkuaService } from './dashboard/taluka/talkua.service';
+import { UsersService } from './dashboard/users/users.service';
+
+
+
+// import {  } from './d;
 
 @NgModule({
   declarations: [
@@ -76,7 +149,53 @@ import { PermissionNewComponent } from './dashboard/permission/permission-new/pe
     RolelistComponent,
     RolenewComponent,
     PermissionListComponent,
-    PermissionNewComponent
+    PermissionNewComponent,
+    AcadmicYearListComponent,
+    AcadmicYearFormComponent,
+    AdmissionListComponent,
+    AdmissionFormComponent,
+    AdmissionTypeListComponent,
+    AdmissionTypeFormComponent,
+    CastListComponent,
+    CastFormComponent,
+    CategoryListComponent,
+    CategoryFormComponent,
+    CountryListComponent,
+    CountryFormComponent,
+    DistrictListComponent,
+    DistrictFormComponent,
+    DivisionListComponent,
+    DivisionFormComponent,
+    InstituteListComponent,
+    InstituteFormComponent,
+    OcupationListComponent,
+    OcupationFormComponent,
+    RelitionListComponent,
+    RelitionFormComponent,
+    SansthaListComponent,
+    SansthaFormComponent,
+    SchoolListComponent,
+    SchoolFormComponent,
+    SchoolcastListComponent,
+    SchoolcastFormComponent,
+    SchoolCategoryListComponent,
+    SchoolCategoryFormComponent,
+    SchoolReligionListComponent,
+    SchoolReligionFormComponent,
+    SchoolSectionListComponent,
+    SchoolSectionFormComponent,
+    SchoolSubcastListComponent,
+    SchoolSubcastFormComponent,
+    SectionListComponent,
+    SectionFormComponent,
+    StatesListComponent,
+    StatesFormComponent,
+    SubCastListComponent,
+    SubCastFormComponent,
+    TalukaListComponent,
+    TalukaFormComponent,
+    UserListComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +207,30 @@ import { PermissionNewComponent } from './dashboard/permission/permission-new/pe
   ],
   providers: [
     SchoolManagementService,
-    RoleServiceService    
+    RoleServiceService,
+    AcadmicYearService,
+    AdmissionService,
+    AdmissionTypeService,
+    CastService,
+    CategoryService,
+    CountryService,
+    DistrictService,
+    DivisionService,
+    InstitudesService,
+    OcupationService,
+    RelitionService,
+    SansthaService,
+    SchoolService,
+    SchoolCastService,
+    SchoolCategoriesService,
+    SchoolReligionsService,
+    SchoolSectionService,
+    SchoolsubCastesService,
+    SectionService,
+    StatesService,
+    SubcastService,
+    TalkuaService,
+    UsersService
   ],
   bootstrap: [AppComponent]
 })

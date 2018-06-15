@@ -6,7 +6,6 @@ import { school } from '../../../classes';
 import { PermissionServiceService } from '../permission-service.service';
 import { ToastrService } from 'ngx-toastr';
 
-
 @Component({
   selector: 'app-permission-new',
   templateUrl: './permission-new.component.html',
