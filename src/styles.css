@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~ng-pick-datetime/assets/style/picker.min.css";
 
 html, body{
 	font-family: 'Roboto', sans-serif;
@@ -8188,3 +8189,6 @@ footer  p a:hover ,.footer p a:hover{
 	}
 }
 /***responsive***/
+.mat-dialog-container{
+    background-color: white !important;
+}

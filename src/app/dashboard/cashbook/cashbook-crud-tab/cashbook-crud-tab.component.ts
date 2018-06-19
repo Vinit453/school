@@ -1,39 +1,53 @@
 import { Component, OnInit } from '@angular/core';
+import { SchoolManagementService } from 'src/app/school-management.service';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { NewCashbookComponent } from 'src/app/dashboard/cashbook/cashbook-crud-tab/new-cashbook/new-cashbook.component';
 
 @Component({
   selector: 'app-cashbook-crud-tab',
   templateUrl: './cashbook-crud-tab.component.html',
   styleUrls: ['./cashbook-crud-tab.component.css']
 })
+
 export class CashbookCrudTabComponent implements OnInit {
 
-  cashbooks = [
-    {
-      "cashbook_id": 1,
-      "cashbook_name": "test1",
-      "bank_name": "bank1",
-      "account_type": "SAVING",
-      "cashbook_created_date": "2018-04-02T18:30:00.000Z"
-    },
-    {
-      "cashbook_id": 2,
-      "cashbook_name": "test2",
-      "bank_name": "bank1",
-      "account_type": "CURRENT",
-      "cashbook_created_date": "2018-05-02T18:30:00.000Z"
-    },
-    {
-      "cashbook_id": 3,
-      "cashbook_name": "test3",
-      "bank_name": "bank2",
-      "account_type": "SAVING",
-      "cashbook_created_date": "2018-10-02T18:30:00.000Z"
-    }
-  ];
+  cashbooks = [];
 
-  constructor() { }
+  constructor(
+    private schoolService: SchoolManagementService, 
+    private dialog: MatDialog) {
+  }
 
   ngOnInit() {
+    this.loadCashbooks();
+  }
+
+  loadCashbooks(){
+    this.schoolService.getcashbooks().subscribe(data=>{
+      if(data){
+        this.cashbooks = data.Cashbooks;
+      }else{
+        console.log("No cashbooks found", data); 
+      }
+    });
+  }
+
+  createCashbook(menu, addNew): void {
+    let dialogRef = this.dialog.open(NewCashbookComponent, {
+      width: '600px',
+      data: menu
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The menu dialog was closed');
+      debugger;
+      if (result != undefined && result != 'cancel') {
+        if (addNew) {
+        } else {
+          menu = result;
+        }
+      }
+    });
   }
 
 }

@@ -81,6 +81,7 @@ import { UserFormComponent } from './dashboard/users/user-form/user-form.compone
 import { CashbookComponent } from './dashboard/cashbook/cashbook.component';
 import { CashbookCrudTabComponent } from './dashboard/cashbook/cashbook-crud-tab/cashbook-crud-tab.component';
 import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report-tab/cashbook-report-tab.component';
+import { NewCashbookComponent } from 'src/app/dashboard/cashbook/cashbook-crud-tab/new-cashbook/new-cashbook.component';
 
 
 //Routing
@@ -146,7 +147,11 @@ const routes: Routes = [
       { path: 'Create Admin/:id', component: UserFormComponent },
       { path: 'Cashbook', component: CashbookComponent,
         children: [
-          { path: 'cashbookcrudtab', component: CashbookCrudTabComponent },
+          { path: 'cashbookcrudtab', component: CashbookCrudTabComponent,
+            children: [
+              { path: 'newcashbook', component: NewCashbookComponent }
+            ]
+          },
           { path: 'cashbookreporttab', component: CashbookReportTabComponent }
         ]
       }

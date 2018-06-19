@@ -113,8 +113,9 @@ import { UsersService } from './dashboard/users/users.service';
 import { CashbookComponent } from './dashboard/cashbook/cashbook.component';
 import { CashbookCrudTabComponent } from './dashboard/cashbook/cashbook-crud-tab/cashbook-crud-tab.component';
 import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report-tab/cashbook-report-tab.component';
-
-
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { NewCashbookComponent } from './dashboard/cashbook/cashbook-crud-tab/new-cashbook/new-cashbook.component';
+import { MatDialogModule } from '@angular/material';
 
 // import {  } from './d;
 
@@ -201,7 +202,8 @@ import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report
     UserFormComponent,
     CashbookComponent,
     CashbookCrudTabComponent,
-    CashbookReportTabComponent
+    CashbookReportTabComponent,
+    NewCashbookComponent
   ],
   imports: [
     BrowserModule,
@@ -209,7 +211,10 @@ import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report
     HttpModule,
     FormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+    MatDialogModule
   ],
   providers: [
     SchoolManagementService,

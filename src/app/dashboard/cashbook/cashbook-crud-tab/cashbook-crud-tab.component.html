@@ -1,8 +1,9 @@
+<div class="cashbook-crud-tab">
 <div class="row">
   <div class="col s12">
     <div class="row tablehead">
       <div class="col s12 tableheadbody">
-        <a class="waves-effect waves-light black btn" routerLink="new" style="float:right;">
+        <a class="waves-effect waves-light black btn" (click)="createCashbook({}, true); " routerLink="newcashbook" style="float:right;">
           <i class="material-icons">add</i>
         </a>
       </div>
@@ -29,4 +30,5 @@
       </table>
     </div>
   </div>
+</div>
 </div>
