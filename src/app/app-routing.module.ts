@@ -78,6 +78,9 @@ import { TalukaListComponent } from './dashboard/taluka/taluka-list/taluka-list.
 import { TalukaFormComponent } from './dashboard/taluka/taluka-form/taluka-form.component';
 import { UserListComponent } from './dashboard/users/user-list/user-list.component';
 import { UserFormComponent } from './dashboard/users/user-form/user-form.component';
+import { CashbookComponent } from './dashboard/cashbook/cashbook.component';
+import { CashbookCrudTabComponent } from './dashboard/cashbook/cashbook-crud-tab/cashbook-crud-tab.component';
+import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report-tab/cashbook-report-tab.component';
 
 
 //Routing
@@ -141,6 +144,12 @@ const routes: Routes = [
       { path: 'taluka/:id', component: TalukaFormComponent },
       { path: 'Create Admin', component: UsersComponent },
       { path: 'Create Admin/:id', component: UserFormComponent },
+      { path: 'Cashbook', component: CashbookComponent,
+        children: [
+          { path: 'cashbookcrudtab', component: CashbookCrudTabComponent },
+          { path: 'cashbookreporttab', component: CashbookReportTabComponent }
+        ]
+      }
     ]
   },
 

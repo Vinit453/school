@@ -110,6 +110,9 @@ import { StatesService } from './dashboard/states/states.service';
 import { SubcastService } from './dashboard/subcast/subcast.service';
 import { TalkuaService } from './dashboard/taluka/talkua.service';
 import { UsersService } from './dashboard/users/users.service';
+import { CashbookComponent } from './dashboard/cashbook/cashbook.component';
+import { CashbookCrudTabComponent } from './dashboard/cashbook/cashbook-crud-tab/cashbook-crud-tab.component';
+import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report-tab/cashbook-report-tab.component';
 
 
 
@@ -195,7 +198,10 @@ import { UsersService } from './dashboard/users/users.service';
     TalukaListComponent,
     TalukaFormComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    CashbookComponent,
+    CashbookCrudTabComponent,
+    CashbookReportTabComponent
   ],
   imports: [
     BrowserModule,
