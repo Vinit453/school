@@ -2,7 +2,7 @@
 <div class="row">
 <ul class="tabs list-inline cashbook-tab">
   <li class="tab firstTab">
-    <a [routerLink]="['cashbookcrudtab']" [ngClass]="{'active': currentState == 'cashbookcrudtab', 'inactive': currentState != 'cashbookcrudtab'}" (click)="currentState = 'cashbookcrudtab'">Create Cashbook</a>
+    <a [routerLink]="['cashbookcrudtab']" [ngClass]="{'active': currentState == 'cashbookcrudtab', 'inactive': currentState != 'cashbookcrudtab'}" (click)="currentState = 'cashbookcrudtab'">Manage Cashbook</a>
   </li>
   <li class="tab">
     <a [routerLink]="['cashbookreporttab']" [ngClass]="{'active': currentState == 'cashbookreporttab', 'inactive': currentState != 'cashbookreporttab'}" (click)="currentState = 'cashbookreporttab'">Cashbook Report</a>

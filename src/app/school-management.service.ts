@@ -652,4 +652,9 @@ export class SchoolManagementService {
     return this.http.get(this.APIuri+'users/Id' + id).map(res => res.json());
   }
 
+  //cashbook
+  getcashbooks() {
+    return this.http.get(this.APIuri + 'cashbooks').map(res => res.json());
+  }
+
 }
