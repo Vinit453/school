@@ -1,137 +1,103 @@
-<div class="page-container">
-  <!--/content-inner-->
-  <div class="left-content">
+<!-- <div class="page-container">
+
+   <div class="left-content">
     <div class="inner-content">
-      <!-- header-starts -->
       <div class="header-section">
-        <!--menu-right-->
-        <div class="top_menu">>
-          <!--/profile_details-->
+        <div class="top_menu">
           <div class="profile_details_left">
             <ul class="nofitications-dropdown">
               <li class="dropdown note dra-down">
-                <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-                  <span>English</span>
-                  <ul class="dropdown">
-                    <li>
-                      <a class="deutsch">Hindi</a>
-                    </li>
-                    <li>
-                      <a class="english">English</a>
-                    </li>
-                    <li>
-                      <a class="espana">Marathi</a>
-                    </li>
-                    <li>
-                      <a class="russian">Gujrati</a>
-                    </li>
-
-                  </ul>
-                </div>
+                <a class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
+                  <span class="avatar-status avatar-online">
+                    <img src="./../assets/image/avatar-7.png" alt="avatar">
+                    <i></i>
+                  </span>
+                  <span style="padding: 2px;">ABC</span>
+                </a>
               </li>
-              <div class="clearfix"></div>
             </ul>
           </div>
-          <div class="clearfix"></div>
-          <!--//profile_details-->
         </div>
-        <!--//menu-right-->
-        <div class="clearfix"></div>
       </div>
-      <!-- //header-ends -->
-      <div class="outter-wp">
-        <!--custom-widgets-->
-        <div class="custom-widgets">
-          <div class="row">
-            <div class="col-md-3 widget">
-              <div class="stats-left ">
-                <h5>Today</h5>
-                <h4> Users</h4>
+      <div class="row">
+          <div class="col-sm-3 col-md-3">
+            <div class="sidebar-menu">
+              <header class="logo">
+                <a href="index.html">
+                  <span id="logo">
+                    <h1>Augment</h1>
+                  </span>
+                </a>
+              </header>
+              <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+              <div class="menu">
+                <ul id="menu">
+                  <li *ngFor="let permis of permission">
+                    <a (click)="navigate(permis)">
+                      <span>{{permis.Permission}}</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div class="stats-right">
-                <label>90</label>
-              </div>
-              <div class="clearfix"> </div>
             </div>
-            <div class="col-md-3 states-mdl">
-              <div class="stats-left">
-                <h5>Today</h5>
-                <h4>Visitors</h4>
-              </div>
-              <div class="stats-right">
-                <label> 85</label>
-              </div>
-              <div class="clearfix"> </div>
-            </div>
-            <div class="col-md-3 states-thrd">
-              <div class="stats-left">
-                <h5>Today</h5>
-                <h4>Tasks</h4>
-              </div>
-              <div class="stats-right">
-                <label>51</label>
-              </div>
-              <div class="clearfix"> </div>
-            </div>
-            <div class="col-md-3 states-last">
-              <div class="stats-left">
-                <h5>Today</h5>
-                <h4>Alerts</h4>
-              </div>
-              <div class="stats-right">
-                <label>30</label>
-              </div>
-              <div class="clearfix"> </div>
-            </div>
-            <div class="clearfix"> </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
+          <div class="col-sm-9 col-md-9">
+            <div class="clearfix">
               <router-outlet></router-outlet>
             </div>
           </div>
         </div>
-        <!--//outer-wp-->
-      </div>
-      <!--footer section start-->
-      <footer>>
+      <footer class="zero-padding">
+        <span class="zero-padding">copyright @ 2018-2019</span>
       </footer>
-      <!--footer section end-->
     </div>
   </div>
-  <!--//content-inner-->
-  <!--/sidebar-menu-->
-  <div class="sidebar-menu">
-    <header class="logo">
-      <a href="#" class="sidebar-icon">
-        <span class="fa fa-bars"></span>
-      </a>
-      <a href="index.html">
-        <span id="logo">
-          <h1>Augment</h1>
-        </span>
-        <!--<img id="logo" src="" alt="Logo"/>-->
-      </a>
+   
+</div> -->
+
+<div class="row">
+  <div class="col-sm-2 col-md-2">
+    <div class="sidebar-menu">
+      <header class="logo">
+        <a href="index.html">
+          <span id="logo">
+            <h1>Augment</h1>
+          </span>
+        </a>
+      </header>
+      <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+      <div class="menu">
+        <ul id="menu">
+          <li *ngFor="let permis of permission">
+            <a (click)="navigate(permis)">
+              <span>{{permis.Permission}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-10 col-md-10">
+    <header class="topnav">
+      <div class="header-section">
+        <div class="top_menu">
+          <div class="pull-right">
+            <ul class="nofitications-dropdown">
+              <li class="dropdown note dra-down">
+                <a class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
+                  <span class="logged-user">ABC</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
-    <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
-    <!--/down-->
-    <div class="down">
-      <a>
-        <span class=" name-caret">Jasmin Leo</span>
-      </a>
-      <p>Superadmin</p>
-    </div>
-    <!--//down-->
-    <div class="menu">
-      <ul id="menu">
-        <li *ngFor="let permis of permission">
-          <a href="dashboard/{{permis.Permission}}">
-            <!-- <i class="fa fa-tachometer"></i> -->
-            <span>{{permis.Permission}}</span>
-          </a>
-        </li>
-      </ul>
+    <div class="clearfix">
+      <router-outlet></router-outlet>
     </div>
   </div>
-  <div class="clearfix"></div>
 </div>
+<footer class="zero-padding">
+  <span class="zero-padding">copyright @ 2018-2019</span>
+</footer>
