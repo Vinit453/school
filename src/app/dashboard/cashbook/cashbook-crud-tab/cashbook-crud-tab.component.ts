@@ -32,22 +32,19 @@ export class CashbookCrudTabComponent implements OnInit {
     });
   }
 
-  createCashbook(menu, addNew): void {
+  createCashbook(): void {
     let dialogRef = this.dialog.open(NewCashbookComponent, {
       width: '600px',
-      data: menu
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The menu dialog was closed');
+      console.log('The create cashbook dialog was closed');
       debugger;
-      if (result != undefined && result != 'cancel') {
-        if (addNew) {
-        } else {
-          menu = result;
+
+      if (result != undefined) {
+          console.log(result);
         }
       }
-    });
+    );
   }
-
 }
