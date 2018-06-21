@@ -657,4 +657,11 @@ export class SchoolManagementService {
     return this.http.get(this.APIuri + 'cashbooks').map(res => res.json());
   }
 
+  addCashbook(cashbook){
+    var body = JSON.stringify(cashbook);
+    var headerOptions = new Headers({ 'Content-Type': 'application/json' });
+    var requestOptions = new RequestOptions({ method: RequestMethod.Post, headers: headerOptions });
+    return this.http.post(this.APIuri + 'cashbooks', body, requestOptions).map(res => res.json());
+  }
+
 }

@@ -43,6 +43,12 @@ export class CashbookCrudTabComponent implements OnInit {
 
       if (result != undefined) {
           console.log(result);
+          this.schoolService.addCashbook(result).subscribe(data => {
+            console.log('cashbook added succesfully');
+            this.cashbooks.push(result);
+          },error=>{
+            console.log('failed to add cashbook');
+          });
         }
       }
     );

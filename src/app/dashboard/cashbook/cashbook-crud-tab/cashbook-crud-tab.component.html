@@ -21,10 +21,10 @@
         </thead>
         <tbody>
           <tr role="row" class="odd" *ngFor="let cashbook of cashbooks">
-            <td>{{ cashbook.cashbook_name }}</td>
-            <td>{{ cashbook.bank_name }}</td>
-            <td>{{ cashbook.account_type }}</td>
-            <td>{{ cashbook.cashbook_created_date }}</td>
+            <td>{{ cashbook.name }}</td>
+            <td>{{ cashbook.bankName }}</td>
+            <td>{{ cashbook.accountType }}</td>
+            <td>{{ cashbook.creationDate | date }}</td>
           </tr>
         </tbody>
       </table>

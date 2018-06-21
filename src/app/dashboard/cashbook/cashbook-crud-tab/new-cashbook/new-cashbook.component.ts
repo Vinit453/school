@@ -22,7 +22,8 @@ export class NewCashbookComponent implements OnInit {
     debugger;
       if (!this.data.cashbookId) {
         this.data.id = UUID.UUID();
-        this.data.creationDate = new Date();
+        let date = new Date();
+        this.data.creationDate = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate();
       }
       this.dialogRef.close(this.data);
   }
