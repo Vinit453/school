@@ -75,13 +75,13 @@ a:hover { transition: all 200ms ease-in-out; }
     width:87%;
 }
 .page-container.sidebar-collapsed .sidebar-menu {
-  width: 65px;
+  width: 63px;
   transition: all 100ms ease-in-out;
   transition-delay: 300ms;
 }
 
 .page-container.sidebar-collapsed-back .sidebar-menu {
-  width: 230px;
+  width: 225px;
   transition: all 100ms ease-in-out;
 }
 
@@ -146,7 +146,7 @@ a:hover { transition: all 200ms ease-in-out; }
 .sidebar-menu {
      position: fixed;
     float: left;
-    width: 230px;
+    width: 220px;
     top: 0;
     left: 0;
     bottom: 0;
@@ -585,13 +585,13 @@ li#menu-mensagens-enviadas,li#menu-mensagens,li#menu-academico-avaliacoes,li#men
 }
 li.dropdown.note {
     background: #00c6d7;
-    border-left: 1px solid rgba(1, 189, 206, 0.93);
+    border-left: 1px solid#2856EB;
     display: inline-block;
     float: left;
 	    cursor: pointer;
 }
 li.dropdown.note a {
-    padding: 1.4em 2em;
+    padding: 1.2em 2em;
 	    display: block;
 }
 li.dropdown.note:hover {
@@ -5416,10 +5416,10 @@ button.btn.btn-default.close {
     margin: 21em 0 2em 0;
 }
 footer {
-    background:#00C6D7;
+	background-color: #052963;
     padding: 12px;
     width: 100%;
-    border-top: 1px solid #00C6D7;
+    border-top: 1px solid #052963;
     text-align:center;
     position: fixed;
     bottom: 0;

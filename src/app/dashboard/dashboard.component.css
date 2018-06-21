@@ -1,0 +1,19 @@
+.zero-padding{
+    padding: 0px !important;
+}
+
+.menu{
+    max-height: calc(100vh - 5rem) !important;
+    overflow-y: auto !important;
+}
+
+.topnav {
+    background-color: #052963;
+    overflow: hidden;
+    margin-left:-20px;
+}
+
+.logged-user{
+    padding: 2px;
+    color:white;
+}
