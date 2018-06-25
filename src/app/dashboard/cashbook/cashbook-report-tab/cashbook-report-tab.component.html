@@ -3,7 +3,7 @@
     <label for="cashbookName" class="col-sm-2 col-form-label">Cashbook Name</label>
     <div class="col-sm-10">
       <select class="form-control form-control-lg" id="cashbookName" name="cashbookName" [(ngModel)]="cashbookReportReq.name" #cashbookName="ngModel">
-        <option value="select" disabled>---select---</option>
+        <option value="select" disabled selected>---select---</option>
         <option *ngFor="let item of cbNames" value="{{item.name}}">{{item.name}}</option>
       </select>
     </div>
@@ -12,7 +12,7 @@
     <label for="bankName" class="col-sm-2 col-form-label">Bank Name</label>
     <div class="col-sm-10">
       <select class="form-control form-control-lg" id="bankName" name="bankName" [(ngModel)]="cashbookReportReq.bankName" #bankName="ngModel">
-        <option value="select" disabled>---select---</option>
+        <option value="select" disabled selected>---select---</option>
         <option *ngFor="let item of bankNames">{{item.bankName}}</option>
       </select>
     </div>
@@ -31,17 +31,20 @@
     <div class="col-sm-10">
       <div class="form-check">
         <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="gridRadios" id="monthlyReport" value="option1" checked [(ngModel)]="reportType">Monthly
+          <input class="form-check-input" type="radio" name="gridRadios" id="monthlyReport" value="monthReport" checked [(ngModel)]="reportType">
+          Last Month
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="gridRadios" id="QuaterlyReport" value="option2" [(ngModel)]="reportType">Quaterly
+          <input class="form-check-input" type="radio" name="gridRadios" id="QuaterlyReport" value="QuaterReport" [(ngModel)]="reportType">
+          Last Quater
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="gridRadios" id="yearlyReport" value="option3" [(ngModel)]="reportType" >Yearly
+          <input class="form-check-input" type="radio" name="gridRadios" id="yearlyReport" value="yearReport" [(ngModel)]="reportType">
+          Last Year
         </label>
       </div>
       <div class="row">
@@ -56,7 +59,7 @@
           <div class="row">
             <label>
               From : 
-              <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" [(ngModel)]="fromTime" required>
+              <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" id="fromDate" name="fromDate" [(ngModel)]="cashbookReportReq.fromDate" #fromDate="ngModel" required>
               <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
             </label>
           </div>
@@ -65,7 +68,7 @@
           <div class="row">
             <label>
               To : 
-              <input [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2" [(ngModel)]="toTime" required>
+              <input [owlDateTimeTrigger]="dt2" [owlDateTime]="dt2" id="toDate" name="toDate" [(ngModel)]="cashbookReportReq.toDate" #toDate="ngModel" required>
               <owl-date-time [pickerType]="'calendar'" #dt2></owl-date-time>
             </label>
           </div>
@@ -75,7 +78,7 @@
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button [disabled]="cashbookReportForm.invalid" type="submit" (click)="getCashbookReport()" class="btn btndefult btn-primary">
+      <button [disabled]="cashbookReportForm.invalid" type="submit" (click)="getCashbookReport(reportType)" class="btn btndefult btn-primary">
         Report
       </button>
     </div>

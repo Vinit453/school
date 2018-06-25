@@ -8,11 +8,12 @@ import { SchoolManagementService } from 'src/app/school-management.service';
 })
 export class CashbookReportTabComponent implements OnInit {
 
-  cashbookReportReq = {};
+  cashbookReportReq ;
   cbNames = [];
   bankNames = [];
 
   constructor(private schoolService: SchoolManagementService) { 
+    this.cashbookReportReq = {};
   }
 
   ngOnInit() {
@@ -34,14 +35,36 @@ export class CashbookReportTabComponent implements OnInit {
     });
   }
 
-  getCashbookReport(){
+  getCashbookReport(reportType){
+    
+    let toDate = new Date();
+    let fromDate = new Date();
+    let factor;
+    if (reportType === 'monthReport'){
+      factor = 30;
+    } else if (reportType === 'quatorReport') {
+      factor = 90;
+    }
+    else if(reportType === 'yearReport'){
+      factor = 365;
+    }
+
+    fromDate.setDate(toDate.getDate() - factor);
+    this.cashbookReportReq.fromDate = fromDate;
+    this.cashbookReportReq.toDate = toDate;
+
     this.schoolService.getCashbookReport(this.cashbookReportReq).subscribe(data => {
       if (data) {
         console.log(data);
+        this.generatePDF(data);
       } else {
         console.log("No cashbooks found", data);
       }
     });
+  }
+
+  private generatePDF(input) {
+    throw new Error("Method not implemented."); 
   }
 
 }
