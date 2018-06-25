@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SchoolManagementService } from 'src/app/school-management.service';
 
+declare var jsPDF: any;
+
 @Component({
   selector: 'app-cashbook-report-tab',
   templateUrl: './cashbook-report-tab.component.html',
@@ -8,12 +10,15 @@ import { SchoolManagementService } from 'src/app/school-management.service';
 })
 export class CashbookReportTabComponent implements OnInit {
 
-  cashbookReportReq ;
-  cbNames = [];
-  bankNames = [];
+  cashbookReportReq;
+  cbNames;
+  cbBankNames;
 
   constructor(private schoolService: SchoolManagementService) { 
     this.cashbookReportReq = {};
+    this.cbNames = [];
+    this.cbBankNames = [];
+
   }
 
   ngOnInit() {
@@ -28,7 +33,7 @@ export class CashbookReportTabComponent implements OnInit {
 
     this.schoolService.getcashbookBanknames().subscribe(data => {
       if (data) {
-        this.bankNames = data.CashbookBankNames;
+        this.cbBankNames = data.CashbookBankNames;
       } else {
         console.log("No cashbooks found", data);
       }
@@ -56,15 +61,31 @@ export class CashbookReportTabComponent implements OnInit {
     this.schoolService.getCashbookReport(this.cashbookReportReq).subscribe(data => {
       if (data) {
         console.log(data);
-        this.generatePDF(data);
+        console.log(data.Cashbooks);
+        this.generatePDF(data.Cashbooks);
+        console.log("bye");
       } else {
         console.log("No cashbooks found", data);
       }
     });
   }
 
-  private generatePDF(input) {
-    throw new Error("Method not implemented."); 
+  private generatePDF(inputData) {
+    var columns = ["ID", "Name", "Bank Name", "Account Type", "Creation Date" ];
+    var rows = [];
+
+    for(let cashbookEntry of inputData ) {
+      rows.push([cashbookEntry.id, cashbookEntry.name, cashbookEntry.bankName, cashbookEntry.accountType, cashbookEntry.creationDate])
+    }  
+    
+    var doc = new jsPDF('p', 'pt');
+    doc.autoTable(columns, rows, {
+      theme: 'grid',
+      addPageContent: function (data) {
+        doc.text("Cashbook Report", 40, 30);
+      }
+    });
+    doc.save('cashbook_report_'+new Date().getTime().toString()+'.pdf');
   }
 
 }
