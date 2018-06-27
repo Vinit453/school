@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cashbook.component.css']
 })
 export class CashbookComponent implements OnInit {
-
+  currentState;
   constructor() { }
 
   ngOnInit() {

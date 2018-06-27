@@ -13,6 +13,7 @@ export class CashbookReportTabComponent implements OnInit {
   cashbookReportReq;
   cbNames;
   cbBankNames;
+  reportType;
 
   constructor(private schoolService: SchoolManagementService) { 
     this.cashbookReportReq = {};

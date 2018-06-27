@@ -15,7 +15,7 @@ export class RolenewComponent implements OnInit {
 
   id: string;
 
-  constructor(private schoolService: SchoolManagementService, private activateRoutes: ActivatedRoute, private roleService: RoleServiceService, private toast: ToastrService, private route: Router) { }
+  constructor(public schoolService: SchoolManagementService, private activateRoutes: ActivatedRoute, private roleService: RoleServiceService, private toast: ToastrService, private route: Router) { }
 
   ngOnInit() {
     //this.resetForm();
@@ -53,4 +53,14 @@ export class RolenewComponent implements OnInit {
       )
     }
   }
+
+  resetForm(role){
+
+  }
+
+  cancelForm(role){
+
+  }
+
+  
 }

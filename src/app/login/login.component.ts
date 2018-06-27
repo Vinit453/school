@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   user: school.Login;
   name: string;
   login_password: string;
+  login_user_name: string;
 
   dologin(): void {
     debugger;
