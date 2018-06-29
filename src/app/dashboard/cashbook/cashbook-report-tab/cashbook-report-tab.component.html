@@ -2,7 +2,7 @@
   <div class="form-group row">
     <label for="cashbookName" class="col-sm-2 col-form-label">Cashbook Name</label>
     <div class="col-sm-10">
-      <select class="form-control form-control-lg" id="cashbookName" name="cashbookName" [(ngModel)]="cashbookReportReq.name" #cashbookName="ngModel">
+      <select class="form-control form-control-lg" id="cashbookName" name="cashbookName" [(ngModel)]="cashbookReportReq.name" #cashbookName="ngModel" required>
         <option value="select" disabled selected>---select---</option>
         <option *ngFor="let item of cbNames" value="{{item.name}}">{{item.name}}</option>
       </select>
@@ -11,7 +11,7 @@
   <div class="form-group row">
     <label for="bankName" class="col-sm-2 col-form-label">Bank Name</label>
     <div class="col-sm-10">
-      <select class="form-control form-control-lg" id="bankName" name="bankName" [(ngModel)]="cashbookReportReq.bankName" #bankName="ngModel">
+      <select class="form-control form-control-lg" id="bankName" name="bankName" [(ngModel)]="cashbookReportReq.bankName" #bankName="ngModel" required>
         <option value="select" disabled selected>---select---</option>
         <option *ngFor="let item of cbBankNames" value="{{item.bankName}}">{{item.bankName}}</option>
       </select>
@@ -20,7 +20,7 @@
   <div class="form-group row">
     <label for="accountType" class="col-sm-2 col-form-label">Account Type</label>
     <div class="col-sm-10">
-      <select class="form-control form-control-lg" id="accountType" name="accountType" [(ngModel)]="cashbookReportReq.accountType" #accountType="ngModel">
+      <select class="form-control form-control-lg" id="accountType" name="accountType" [(ngModel)]="cashbookReportReq.accountType" #accountType="ngModel" required>
         <option>SAVING</option>
         <option>CURRENT</option>
       </select>
