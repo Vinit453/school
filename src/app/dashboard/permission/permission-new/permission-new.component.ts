@@ -14,7 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 export class PermissionNewComponent implements OnInit {
   id: string;
 
-  constructor(private schoolService: SchoolManagementService, private activateRoutes: ActivatedRoute, private permissionService: PermissionServiceService, private toast: ToastrService, private route: Router) { }
+  constructor(public schoolService: SchoolManagementService, private activateRoutes: ActivatedRoute, private permissionService: PermissionServiceService, private toast: ToastrService, private route: Router) { }
   role: school.role;
   ngOnInit() {
 
@@ -59,4 +59,8 @@ export class PermissionNewComponent implements OnInit {
       )
     }
   }
+
+  resetForm(permission){}
+  cancelForm(permission){}
+  
 }
