@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   dologin(): void {
     debugger;
-    this.schoolService.login( this.name, this.login_password).subscribe(data => {
+    this.schoolService.login( this.login_user_name, this.login_password).subscribe(data => {
       console.log("Loggin Details", data);
       if(data){
         this.user = data;
