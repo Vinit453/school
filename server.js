@@ -22,7 +22,7 @@ const forceSSL = function() {
 // Instruct the app
 // to use the forceSSL
 // middleware
-app.use(forceSSL());
+//app.use(forceSSL());
 app.use('/dist/schoolManagement', express.static(__dirname + '/dist/schoolManagement'));
 
 // For all GET requests, send back index.html
@@ -31,6 +31,7 @@ app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/dist/schoolManagement/index.html'));
   });
 
+console.log("server started");
 // Start the app by listening on the default
 // Heroku port
-app.listen(process.env.PORT || 3000 );
+app.listen(process.env.PORT || 9000 );

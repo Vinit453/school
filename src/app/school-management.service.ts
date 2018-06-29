@@ -18,7 +18,7 @@ export class SchoolManagementService {
   //Custom Varialble
   selectedrole: school.role;  
   selectedpermission: school.permission;
-  private APIuri = 'http://localhost:3000/api/';
+  private APIuri = 'http://159.65.89.101:3000/api/';
   constructor(private http: Http) { }
   
   //-----------------------------------
