@@ -116,6 +116,9 @@ import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { NewCashbookComponent } from './dashboard/cashbook/cashbook-crud-tab/new-cashbook/new-cashbook.component';
 import { MatDialogModule } from '@angular/material';
+import { CashTransferTabComponent } from './dashboard/cashbook/cash-transfer-tab/cash-transfer-tab.component';
+import { OpeningBalanceTabComponent } from './dashboard/cashbook/opening-balance-tab/opening-balance-tab.component';
+import { TransactionsTabComponent } from './dashboard/cashbook/transactions-tab/transactions-tab.component';
 
 // import {  } from './d;
 
@@ -203,7 +206,10 @@ import { MatDialogModule } from '@angular/material';
     CashbookComponent,
     CashbookCrudTabComponent,
     CashbookReportTabComponent,
-    NewCashbookComponent
+    NewCashbookComponent,
+    CashTransferTabComponent,
+    OpeningBalanceTabComponent,
+    TransactionsTabComponent
   ],
   imports: [
     BrowserModule,

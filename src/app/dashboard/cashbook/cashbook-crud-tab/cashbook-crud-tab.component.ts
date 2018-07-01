@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SchoolManagementService } from 'src/app/school-management.service';
 import { MatDialog, MatDialogRef } from '@angular/material';
-import { NewCashbookComponent } from 'src/app/dashboard/cashbook/cashbook-crud-tab/new-cashbook/new-cashbook.component';
+import { NewCashbookComponent } from './new-cashbook/new-cashbook.component';
 
 @Component({
   selector: 'app-cashbook-crud-tab',

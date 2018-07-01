@@ -82,6 +82,9 @@ import { CashbookComponent } from './dashboard/cashbook/cashbook.component';
 import { CashbookCrudTabComponent } from './dashboard/cashbook/cashbook-crud-tab/cashbook-crud-tab.component';
 import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report-tab/cashbook-report-tab.component';
 import { NewCashbookComponent } from 'src/app/dashboard/cashbook/cashbook-crud-tab/new-cashbook/new-cashbook.component';
+import { CashTransferTabComponent } from './dashboard/cashbook/cash-transfer-tab/cash-transfer-tab.component';
+import { OpeningBalanceTabComponent } from './dashboard/cashbook/opening-balance-tab/opening-balance-tab.component';
+import { TransactionsTabComponent } from './dashboard/cashbook/transactions-tab/transactions-tab.component';
 
 
 //Routing
@@ -152,6 +155,9 @@ const routes: Routes = [
               { path: 'newcashbook', component: NewCashbookComponent }
             ]
           },
+          { path: 'transactionstab', component: TransactionsTabComponent },
+          { path: 'openingbalancetab', component: OpeningBalanceTabComponent },
+          { path: 'cashtransfertab', component: CashTransferTabComponent },
           { path: 'cashbookreporttab', component: CashbookReportTabComponent }
         ]
       }

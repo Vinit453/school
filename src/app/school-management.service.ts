@@ -15,6 +15,7 @@ import { school } from './classes';
   providedIn: 'root'
 })
 export class SchoolManagementService {
+
   //Custom Varialble
   selectedrole: school.role;  
   selectedpermission: school.permission;
@@ -701,5 +702,11 @@ export class SchoolManagementService {
     return this.http.post(this.APIuri + 'cashbooks/report', body, requestOptions).map(res => res.json());
   }
 
+  getSubAccounts(): any {
+    throw new Error("Method not implemented.");
+  }
 
+  getBankNames(): any {
+    throw new Error("Method not implemented.");
+  }
 }
