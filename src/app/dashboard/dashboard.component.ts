@@ -11,6 +11,8 @@ import { SchoolManagementService } from '../school-management.service';
 export class DashboardComponent implements OnInit {
 
   permission;
+  user;
+
 
   constructor(private route: Router) { }
 
@@ -18,11 +20,16 @@ export class DashboardComponent implements OnInit {
     // console.log("Permission On Dashboard", localStorage.getItem('dashboard'));   
     this.permission = JSON.parse(localStorage.getItem('dashboard'));
     console.log("Permission Log", this.permission[0]);
+    this.user =  localStorage.getItem('user');
   }
 
   navigate(permission){
     debugger;
     this.route.navigate(['/dashboard/', permission.Permission ]);
+  }
+
+  logout(){
+    
   }
 
 }

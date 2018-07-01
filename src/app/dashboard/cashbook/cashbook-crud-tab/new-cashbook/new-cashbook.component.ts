@@ -47,7 +47,6 @@ export class NewCashbookComponent implements OnInit {
         console.log("No Name Of Accounts found", data);
       }
     });
-    
   }
 
   save() {

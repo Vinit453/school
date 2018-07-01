@@ -85,6 +85,10 @@ import { NewCashbookComponent } from 'src/app/dashboard/cashbook/cashbook-crud-t
 import { CashTransferTabComponent } from './dashboard/cashbook/cash-transfer-tab/cash-transfer-tab.component';
 import { OpeningBalanceTabComponent } from './dashboard/cashbook/opening-balance-tab/opening-balance-tab.component';
 import { TransactionsTabComponent } from './dashboard/cashbook/transactions-tab/transactions-tab.component';
+import { FeeComponent } from './dashboard/fee/fee.component';
+import { FeeBankDetailsComponent } from './dashboard/fee/fee-bank-details/fee-bank-details.component';
+import { FeeCollectionComponent } from './dashboard/fee/fee-collection/fee-collection.component';
+import { ChallanComponent } from './dashboard/fee/challan/challan.component';
 
 
 //Routing
@@ -159,6 +163,13 @@ const routes: Routes = [
           { path: 'openingbalancetab', component: OpeningBalanceTabComponent },
           { path: 'cashtransfertab', component: CashTransferTabComponent },
           { path: 'cashbookreporttab', component: CashbookReportTabComponent }
+        ]
+      },
+      { path: 'Fee', component: FeeComponent,
+        children: [
+          { path: 'feebankdetails', component: FeeBankDetailsComponent},
+          { path: 'feecollection', component: FeeCollectionComponent },
+          { path: 'challan', component: ChallanComponent }
         ]
       }
     ]

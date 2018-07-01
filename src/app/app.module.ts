@@ -119,6 +119,10 @@ import { MatDialogModule } from '@angular/material';
 import { CashTransferTabComponent } from './dashboard/cashbook/cash-transfer-tab/cash-transfer-tab.component';
 import { OpeningBalanceTabComponent } from './dashboard/cashbook/opening-balance-tab/opening-balance-tab.component';
 import { TransactionsTabComponent } from './dashboard/cashbook/transactions-tab/transactions-tab.component';
+import { FeeComponent } from './dashboard/fee/fee.component';
+import { FeeCollectionComponent } from './dashboard/fee/fee-collection/fee-collection.component';
+import { FeeBankDetailsComponent } from './dashboard/fee/fee-bank-details/fee-bank-details.component';
+import { ChallanComponent } from './dashboard/fee/challan/challan.component';
 
 // import {  } from './d;
 
@@ -209,7 +213,11 @@ import { TransactionsTabComponent } from './dashboard/cashbook/transactions-tab/
     NewCashbookComponent,
     CashTransferTabComponent,
     OpeningBalanceTabComponent,
-    TransactionsTabComponent
+    TransactionsTabComponent,
+    FeeComponent,
+    FeeCollectionComponent,
+    FeeBankDetailsComponent,
+    ChallanComponent
   ],
   imports: [
     BrowserModule,

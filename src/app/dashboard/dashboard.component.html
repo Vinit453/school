@@ -84,8 +84,8 @@
           <div class="pull-right">
             <ul class="nofitications-dropdown">
               <li class="dropdown note dra-down">
-                <a class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
-                  <span class="logged-user">ABC</span>
+                <a (click)="logout()" class="waves-effect waves-block waves-light profile-button" data-activates="profile-dropdown">
+                  <span class="logged-user">{{user}}</span>
                 </a>
               </li>
             </ul>
