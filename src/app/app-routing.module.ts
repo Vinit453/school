@@ -82,6 +82,10 @@ import { CashbookComponent } from './dashboard/cashbook/cashbook.component';
 import { CashbookCrudTabComponent } from './dashboard/cashbook/cashbook-crud-tab/cashbook-crud-tab.component';
 import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report-tab/cashbook-report-tab.component';
 import { NewCashbookComponent } from 'src/app/dashboard/cashbook/cashbook-crud-tab/new-cashbook/new-cashbook.component';
+import { FeeComponent } from './dashboard/fee/fee.component';
+import { FeeBankDetailsComponent } from './dashboard/fee/fee-bank-details/fee-bank-details.component';
+import { FeeCollectionComponent } from './dashboard/fee/fee-collection/fee-collection.component';
+import { ChallanComponent } from './dashboard/fee/challan/challan.component';
 
 
 //Routing
@@ -153,6 +157,13 @@ const routes: Routes = [
             ]
           },
           { path: 'cashbookreporttab', component: CashbookReportTabComponent }
+        ]
+      },
+      { path: 'Fee', component: FeeComponent,
+        children: [
+          { path: 'feebankdetails', component: FeeBankDetailsComponent},
+          { path: 'feecollection', component: FeeCollectionComponent },
+          { path: 'challan', component: ChallanComponent }
         ]
       }
     ]

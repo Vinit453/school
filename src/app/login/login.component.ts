@@ -30,8 +30,10 @@ export class LoginComponent implements OnInit {
       console.log("Loggin Details", data);
       if(data.errorText == undefined){
         this.user = data;
+        debugger;
         const dashboard = JSON.stringify(this.user);
         localStorage.setItem('dashboard', dashboard);
+        localStorage.setItem('user', this.login_user_name);
         this.router.navigate(['/dashboard']);
         this.toastr.success("Login Sucessfully");        
       }else{
