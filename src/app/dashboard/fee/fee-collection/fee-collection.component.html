@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="page-header">
+        <h5>Collect fees</h5>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-sm-4 col-md-4">
+            <div class="card card-bottom-margin addPointerIcon" >
+                <div class="card-body card-bg">
+                    <h6 class="card-title">Fees Paid</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div class="card card-bottom-margin addPointerIcon">
+                <div class="card-body card-bg">
+                    <h6 class="card-title">Fees Update</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div class="card card-bottom-margin addPointerIcon">
+                <div class="card-body card-bg">
+                    <h6 class="card-title">Fee Receipt Submit</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-header">
+        <h5>Reporting</h5>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-sm-4 col-md-4">
+            <div class="card card-bottom-margin addPointerIcon">
+                <div class="card-body card-bg">
+                    <h6 class="card-title">Reports</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-header">
+        <h5>Fees Settings</h5>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-sm-4 col-md-4" *ngFor="let module of feesModules">
+            <div class="card card-bottom-margin addPointerIcon" (click)="openModal(module)">
+                <div class="card-body card-bg">
+                    <h6 class="card-title">{{module.name}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

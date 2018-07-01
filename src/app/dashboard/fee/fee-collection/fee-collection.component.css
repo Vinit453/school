@@ -1,0 +1,11 @@
+.card-bottom-margin{
+    margin-bottom: 10px;
+}
+
+.card-bg{
+    background-color: #ebebeb;
+}
+
+.addPointerIcon{
+    cursor:pointer;
+}

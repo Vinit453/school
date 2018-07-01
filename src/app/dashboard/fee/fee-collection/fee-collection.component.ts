@@ -7,9 +7,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeeCollectionComponent implements OnInit {
 
-  constructor() { }
+  feesModules;
+  constructor() {
+    this.feesModules = [{
+      name:'Installment Type',
+      fields:[],
+      api:''
+    },
+    {
+      name:'Fee Type',
+      fields:[],
+      api:''
+    },
+    {
+      name:'Fee Description',
+      fields:[],
+      api:''
+    },{
+      name:'Select Fee',
+      fields:[],
+      api:''
+    },
+    {
+      name:'Set Fee Student Wise',
+      fields:[],
+      api:''
+    }
+  ];
+
+  }
 
   ngOnInit() {
+  }
+
+  openModal(module){
+    //open  module
   }
 
 }

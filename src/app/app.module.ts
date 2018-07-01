@@ -120,6 +120,7 @@ import { FeeComponent } from './dashboard/fee/fee.component';
 import { FeeCollectionComponent } from './dashboard/fee/fee-collection/fee-collection.component';
 import { FeeBankDetailsComponent } from './dashboard/fee/fee-bank-details/fee-bank-details.component';
 import { ChallanComponent } from './dashboard/fee/challan/challan.component';
+import { CrudModalComponent } from './common/crud-modal/crud-modal.component';
 
 // import {  } from './d;
 
@@ -211,7 +212,8 @@ import { ChallanComponent } from './dashboard/fee/challan/challan.component';
     FeeComponent,
     FeeCollectionComponent,
     FeeBankDetailsComponent,
-    ChallanComponent
+    ChallanComponent,
+    CrudModalComponent
   ],
   imports: [
     BrowserModule,
