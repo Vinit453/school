@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     debugger;
     this.schoolService.login( this.login_user_name, this.login_password).subscribe(data => {
       console.log("Loggin Details", data);
-      if(data){
+      if(data.errorText == undefined){
         this.user = data;
         const dashboard = JSON.stringify(this.user);
         localStorage.setItem('dashboard', dashboard);

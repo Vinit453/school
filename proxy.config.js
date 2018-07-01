@@ -5,7 +5,7 @@ const HttpsProxyAgent = require('https-proxy-agent');
 const proxyConfig = [
   {
     context: '/api',
-    target: 'http://localhost:3000',
+    target: 'http://159.65.89.101:3000',
     changeOrigin: true
   }
 ];
