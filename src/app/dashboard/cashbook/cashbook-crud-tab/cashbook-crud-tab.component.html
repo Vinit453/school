@@ -3,7 +3,10 @@
   <div class="col s12">
     <div class="row tablehead">
       <div class="col s12 tableheadbody">
-        <a class="waves-effect waves-light black btn" (click)="createCashbook(); " routerLink="newcashbook" style="float:right;">
+        <label style="float:left; font-size: 24px;">
+         Cashbook : 
+        </label>
+        <a class="waves-effect waves-light black btn" (click)="create(); " routerLink="newcashbook" style="float:right;">
           <i class="material-icons">add</i>
         </a>
       </div>
@@ -14,17 +17,69 @@
         <thead class="blackTableHeader">
         <tr role="row">
           <th>Cashbook Name</th>
-          <th>Bank Name</th>
-          <th>Account Type</th>
-          <th>Creation Date</th>
         </tr>
         </thead>
         <tbody>
           <tr role="row" class="odd" *ngFor="let cashbook of cashbooks">
             <td>{{ cashbook.name }}</td>
-            <td>{{ cashbook.bankName }}</td>
-            <td>{{ cashbook.accountType }}</td>
-            <td>{{ cashbook.creationDate | date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+    <br>
+    <div class="row tablehead">
+      <div class="col s12 tableheadbody">
+        <label style="float:left; font-size: 24px;">
+          Ledger :
+        </label>
+      </div>
+    </div>
+    <div id="data-table-simple_wrapper" class="dataTables_wrapper">
+      <table id="data-table-simple" class="responsive-table display dataTable" role="grid" aria-describedby="data-table-simple_info"
+        cellspacing="0">
+        <thead class="blackTableHeader">
+          <tr role="row">
+            <th>Cashbook Name</th>
+            <th>Account Type</th>
+            <th>Name Of Account</th>
+            <th>Transaction Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row" class="odd" *ngFor="let ledger of ledgers">
+            <td>{{ ledger.cashbookName }}</td>
+            <td>{{ ledger.accountType }}</td>
+            <td>{{ ledger.nameOfAccount }}</td>
+            <td>{{ ledger.transactionType}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <div class="row tablehead">
+      <div class="col s12 tableheadbody">
+        <label style="float:left; font-size: 24px;">
+          Name Of Accounts :
+        </label>
+      </div>
+    </div>
+    <div id="data-table-simple_wrapper" class="dataTables_wrapper">
+      <table id="data-table-simple" class="responsive-table display dataTable" role="grid" aria-describedby="data-table-simple_info"
+        cellspacing="0">
+        <thead class="blackTableHeader">
+          <tr role="row">
+            <th>Name Of Account</th>
+            <th>Cashbook Name</th>
+            <th>Account Type</th>
+            <th>Sub Account</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row" class="odd" *ngFor="let nameOfAccount of nameOfAccounts">
+            <td>{{ nameOfAccount.nameOfAccount }}</td>
+            <td>{{ nameOfAccount.cashbookName }}</td>
+            <td>{{ nameOfAccount.accountType }}</td>
+            <td>{{ nameOfAccount.subAccount}}</td>
           </tr>
         </tbody>
       </table>
