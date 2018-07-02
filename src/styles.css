@@ -8192,3 +8192,16 @@ footer  p a:hover ,.footer p a:hover{
 .mat-dialog-container{
     background-color: white !important;
 }
+
+.reduce-padding{
+    padding: 5px 15px !important;
+}
+
+.tb-header{
+     background-color: #062c63 !important;
+     color: white;
+}
+
+.tb-height{
+    max-height: 100vh;
+}

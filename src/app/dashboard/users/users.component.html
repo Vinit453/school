@@ -1,3 +1,43 @@
-<p>
-  users works!
-</p>
+<div class="container">
+    <div class="page-header">
+        <span><h5>Users <span class="pull-right">
+            <button class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit" ><fa name="plus-square"></fa></button>
+           </span></h5>
+          
+      </span>
+    </div>
+    <hr/>
+    <div class="row tb-header" >
+    <div class="col-sm-3 col-md-3">
+        Name
+      </div>
+      <div class="col-sm-3 col-md-3">
+        Role Id
+      </div>
+      <div class="col-sm-3 col-md-3">
+          School Id
+        </div>
+  
+     
+      
+      <div class="col-sm-3 col-md-3">
+          Action
+      </div>
+    </div>
+    <div class="row tb-height" *ngFor="let item of data">
+      <div class="col-sm-3 col-md-3">
+        {{item.login_user_name}}
+      </div>
+      <div class="col-sm-3 col-md-3">
+        {{item.login_role_id}}
+      </div>
+      <div class="col-sm-3 col-md-3">
+          {{item.login_school_id}}
+        </div>
+     
+      <div class="col-sm-3 col-md-3">
+          <button class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit" ><fa name="edit"></fa></button>
+          <button class="btn btn-danger btn-sm reduce-padding" data-title="Delete" data-toggle="modal" data-target="#delete" ><fa name="trash"></fa></button>
+      </div>
+    </div>
+  </div>

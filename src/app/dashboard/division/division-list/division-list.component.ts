@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SchoolManagementService } from '../../../school-management.service';
 
 @Component({
   selector: 'app-division-list',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DivisionListComponent implements OnInit {
 
-  constructor() { }
+  data;
+  constructor(private service: SchoolManagementService) {
+    service.getdivisions().subscribe((result)=>{
+      this.data = result.Divisions;
+    });
+   }
 
+   get
+   
   ngOnInit() {
   }
 

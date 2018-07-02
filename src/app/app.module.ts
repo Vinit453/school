@@ -121,6 +121,8 @@ import { FeeCollectionComponent } from './dashboard/fee/fee-collection/fee-colle
 import { FeeBankDetailsComponent } from './dashboard/fee/fee-bank-details/fee-bank-details.component';
 import { ChallanComponent } from './dashboard/fee/challan/challan.component';
 import { CrudModalComponent } from './common/crud-modal/crud-modal.component';
+import { MomentModule } from 'angular2-moment';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 // import {  } from './d;
 
@@ -224,7 +226,9 @@ import { CrudModalComponent } from './common/crud-modal/crud-modal.component';
     BrowserAnimationsModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    MatDialogModule
+    MatDialogModule,
+    MomentModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     SchoolManagementService,

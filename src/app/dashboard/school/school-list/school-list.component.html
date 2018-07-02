@@ -1,3 +1,39 @@
-<p>
-  school-list works!
-</p>
+<div class="container">
+    <div class="page-header">
+        <span><h5>School <span class="pull-right">
+            <button class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit" ><fa name="plus-square"></fa></button>
+           </span></h5>
+          
+      </span>
+    </div>
+    <hr/>
+    <div class="row tb-header" >
+      <div class="col-sm-3 col-md-3">
+        School Name
+      </div>
+      <div class="col-sm-3 col-md-3">
+        UDI No
+      </div>
+      <div class="col-sm-3 col-md-3">
+       School board university
+      </div>
+      <div class="col-sm-3 col-md-3">
+          Action
+      </div>
+    </div>
+    <div class="row tb-height" *ngFor="let item of data">
+      <div class="col-sm-3 col-md-3">
+        {{item.school_name}}
+      </div>
+      <div class="col-sm-3 col-md-3">
+        {{item.school_udise_no}}
+      </div>
+      <div class="col-sm-3 col-md-3">
+          {{item.school_board_univercity}}
+      </div>
+      <div class="col-sm-3 col-md-3">
+          <button class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit" ><fa name="edit"></fa></button>
+          <button class="btn btn-danger btn-sm reduce-padding" data-title="Delete" data-toggle="modal" data-target="#delete" ><fa name="trash"></fa></button>
+      </div>
+    </div>
+  </div>

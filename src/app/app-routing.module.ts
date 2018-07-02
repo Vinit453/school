@@ -123,8 +123,6 @@ const routes: Routes = [
       { path: 'relition/:id', component: RelitionFormComponent },
       { path: 'roles', component: RolesComponent },
       { path: 'roles/:id', component: RolenewComponent },
-      { path: 'Create Sanstha', component: SansthaComponent },
-      { path: 'Manage Sanstha', component: SansthaComponent },
       { path: 'Create School', component: SchoolComponent },
       { path: 'Manage School', component: SchoolComponent },
       { path: 'schoolcastes', component: SchoolCastesComponent },
@@ -149,6 +147,17 @@ const routes: Routes = [
       { path: 'taluka/:id', component: TalukaFormComponent },
       { path: 'Create Admin', component: UsersComponent },
       { path: 'Create Admin/:id', component: UserFormComponent },
+
+      { path: 'Users', component: UsersComponent },
+      { path: 'Sanstha', component: SansthaComponent,
+        children: [
+          { path: 'sansthas', component: SansthaListComponent},
+          { path: 'institute', component: InstituteListComponent},
+          { path: 'school', component: SchoolListComponent},
+          { path: 'section', component: SectionListComponent},
+          { path: 'division', component: DivisionListComponent}
+        ] 
+      },
       { path: 'Cashbook', component: CashbookComponent,
         children: [
           { path: 'cashbookcrudtab', component: CashbookCrudTabComponent,
