@@ -1,3 +1,55 @@
-<p>
-  taluka-tab works!
-</p>
+<div class="container">
+  <div class="page-header">
+    <span>
+      <h5>Taluka
+        <span class="pull-right">
+          <button class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit">
+            <fa name="plus-square"></fa>
+          </button>
+        </span>
+      </h5>
+
+    </span>
+  </div>
+  <hr/>
+  <div class="row tb-header">
+    <div class="col-sm-2 col-md-2">
+      Taluka Name
+    </div>
+    <div class="col-sm-2 col-md-2">
+      District Name
+    </div>
+    <div class="col-sm-2 col-md-2">
+      State Name
+    </div>
+    <div class="col-sm-2 col-md-2">
+      Country Name
+    </div>
+    <div class="col-sm-2 col-md-2">
+      Action
+    </div>
+  </div>
+  <div class="row tb-height" *ngFor="let item of data">
+    <div class="col-sm-2 col-md-2">
+      {{item.taluka_name}}
+    </div>
+    <div class="col-sm-2 col-md-2">
+      {{item.taluka_district_id}}
+    </div>
+    <div class="col-sm-2 col-md-2">
+      {{item.taluka_state_id}}
+    </div>
+    <div class="col-sm-2 col-md-2">
+      {{item.taluka_country_id}}
+    </div>
+
+    <div class="col-sm-2 col-md-2">
+      <button class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit">
+        <fa name="edit"></fa>
+      </button>
+      <button class="btn btn-danger btn-sm reduce-padding" data-title="Delete" data-toggle="modal" data-target="#delete">
+        <fa name="trash"></fa>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SchoolManagementService } from '../../../school-management.service';
 
 @Component({
   selector: 'app-state-tab',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StateTabComponent implements OnInit {
 
-  constructor() { }
+  data;
+  constructor(private service: SchoolManagementService) {
+    service.getstates().subscribe((result) => {
+      this.data = result.States;
+    });
+  }
 
   ngOnInit() {
   }
