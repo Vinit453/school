@@ -116,6 +116,9 @@ import { CashbookReportTabComponent } from './dashboard/cashbook/cashbook-report
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { NewCashbookComponent } from './dashboard/cashbook/cashbook-crud-tab/new-cashbook/new-cashbook.component';
 import { MatDialogModule } from '@angular/material';
+import { CashTransferTabComponent } from './dashboard/cashbook/cash-transfer-tab/cash-transfer-tab.component';
+import { OpeningBalanceTabComponent } from './dashboard/cashbook/opening-balance-tab/opening-balance-tab.component';
+import { TransactionsTabComponent } from './dashboard/cashbook/transactions-tab/transactions-tab.component';
 import { FeeComponent } from './dashboard/fee/fee.component';
 import { FeeCollectionComponent } from './dashboard/fee/fee-collection/fee-collection.component';
 import { FeeBankDetailsComponent } from './dashboard/fee/fee-bank-details/fee-bank-details.component';
@@ -123,6 +126,15 @@ import { ChallanComponent } from './dashboard/fee/challan/challan.component';
 import { CrudModalComponent } from './common/crud-modal/crud-modal.component';
 import { MomentModule } from 'angular2-moment';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CountryTabComponent } from './dashboard/country/country-tab/country-tab.component';
+import { StateTabComponent } from './dashboard/country/state-tab/state-tab.component';
+import { DistrictTabComponent } from './dashboard/country/district-tab/district-tab.component';
+import { TalukaTabComponent } from './dashboard/country/taluka-tab/taluka-tab.component';
+import { ReligionComponent } from './dashboard/religion/religion.component';
+import { ReligionTabComponent } from './dashboard/religion/religion-tab/religion-tab.component';
+import { CasteTabComponent } from './dashboard/religion/caste-tab/caste-tab.component';
+import { SubcasteTabComponent } from './dashboard/religion/subcaste-tab/subcaste-tab.component';
+import { CategoryTabComponent } from './dashboard/religion/category-tab/category-tab.component';
 
 // import {  } from './d;
 
@@ -211,11 +223,23 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     CashbookCrudTabComponent,
     CashbookReportTabComponent,
     NewCashbookComponent,
+    CashTransferTabComponent,
+    OpeningBalanceTabComponent,
+    TransactionsTabComponent,
     FeeComponent,
     FeeCollectionComponent,
     FeeBankDetailsComponent,
     ChallanComponent,
-    CrudModalComponent
+    CrudModalComponent,
+    CountryTabComponent,
+    StateTabComponent,
+    DistrictTabComponent,
+    TalukaTabComponent,
+    ReligionComponent,
+    ReligionTabComponent,
+    CasteTabComponent,
+    SubcasteTabComponent,
+    CategoryTabComponent
   ],
   imports: [
     BrowserModule,

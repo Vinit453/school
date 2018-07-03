@@ -1,0 +1,115 @@
+<form class="transactionsForm" #transactionsForm="ngForm">
+  <div class="form-group row">
+    <div class="form-group col-sm-5">
+      <label for="cashbookName" class="col-sm-5 col-form-label">Cashbook Name</label>
+      <select class="form-control form-control-lg" id="cashbookName" name="cashbookName" [(ngModel)]="transactionReq.cashbookName"
+        #cashbookName="ngModel" required>
+        <option value="select" disabled selected>---select---</option>
+        <option *ngFor="let item of cbNames" value="{{item.name}}">{{item.name}}</option>
+      </select>
+    </div>
+    <div class="form-group col-sm-5">
+      <label for="accountType" class="col-sm-5 col-form-label">Account Type</label>
+      <select class="form-control form-control-lg" id="accountType" name="accountType" [(ngModel)]="transactionReq.accountType"
+        #accountType="ngModel" required>
+        <option>Credit</option>
+        <option>Debit</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="form-group col-sm-5">
+      <label for="nameOfAcc" class="col-sm-5 col-form-label">Name Of Acc</label>
+      <select class="form-control form-control-lg" id="nameOfAcc" name="nameOfAcc" [(ngModel)]="transactionReq.nameOfAccount"
+        #nameOfAcc="ngModel" required>
+        <option value="select" disabled selected>---select---</option>
+        <option *ngFor="let item of nameOfAccounts" value="{{item.nameOfAccount}}">{{item.nameOfAccount}}</option>
+      </select>
+    </div>
+    <div class="form-group col-sm-5">
+      <label for="subAccount" class="col-sm-5 col-form-label">Sub Acc</label>
+      <select class="form-control form-control-lg" id="subAccount" name="subAccount" [(ngModel)]="transactionReq.subAccount" #subAccount="ngModel"
+        required>
+        <option value="select" disabled selected>---select---</option>
+        <option *ngFor="let item of subAccounts" value="{{item.subAccount}}">{{item.subAccount}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+      <div class="form-group col-sm-5">
+        <label for="voucherNo" class="col-sm-5 col-form-label">Voucher No.</label>
+        <input class="form-control form-control-lg" id="voucherNo" name="voucherNo" [(ngModel)]="transactionReq.voucherNo"
+          #voucherNo="ngModel" required>
+      </div>
+      <div class="form-group col-sm-5">
+        <label for="nameOfparty" class="col-sm-5 col-form-label">Name of Party</label>
+        <input class="form-control form-control-lg" id="nameOfparty" name="nameOfparty" [(ngModel)]="transactionReq.nameOfparty"
+          #nameOfparty="ngModel" required>
+      </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="form-group col-sm-5">
+      <label for="cashAmount" class="col-sm-5 col-form-label">Cash Amount</label>
+      <input class="form-control form-control-lg" id="cashAmount" type="number"  name="cashAmount" [(ngModel)]="transactionReq.cashAmount"
+        #cahAmount="ngModel" required>
+    </div>
+    <div class="form-group col-sm-5">
+      <label for="bankAmount" class="col-sm-5 col-form-label">Bank Amount</label>
+      <input class="form-control form-control-lg" id="bankAmount" type="number" name="bankAmount" [(ngModel)]="transactionReq.bankAmount"
+        #bankAmount="ngModel" required>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="form-group col-sm-5">
+      <label for="rate" class="col-sm-5 col-form-label">Rate</label>
+      <input class="form-control form-control-lg" id="rate" name="rate" [(ngModel)]="transactionReq.rate"
+        #rate="ngModel" required>
+    </div>
+    <div class="form-group col-sm-5">
+      <label for="quantity" class="col-sm-5 col-form-label">Quantity</label>
+      <input class="form-control form-control-lg" id="quantity" name="quantity" [(ngModel)]="transactionReq.quantity"
+        #quantity="ngModel" required>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="form-group col-sm-5">
+      <label for="total" class="col-sm-5 col-form-label">Total</label>
+      <input class="form-control form-control-lg" id="total" name="total" [(ngModel)]="transactionReq.total"
+        #total="ngModel" required>
+    </div>
+    <div class="form-group col-sm-5">
+      <label for="description" class="col-sm-5 col-form-label">Description</label>
+      <input class="form-control form-control-lg" id="description" name="description" [(ngModel)]="transactionReq.description"
+        #description="ngModel" required>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="form-group col-sm-5">
+      <label for="bankName" class="col-sm-5 col-form-label">Bank Name</label>
+      <select class="form-control form-control-lg" id="bankName" name="bankName" [(ngModel)]="transactionReq.bankName" #bankName="ngModel"
+        required>
+        <option value="select" disabled selected>---select---</option>
+        <option *ngFor="let item of bankNames" value="{{item.bankName}}">{{item.bankName}}</option>
+      </select>
+    </div>
+    <div class=" form-group col-sm-5">
+      <label for="amount" class="col-sm-5 col-form-label">Date</label>
+      <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" id="fromDate" name="fromDate" [(ngModel)]="transactionReq.date"
+        #date="ngModel" required>
+      <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button [disabled]="transactionsForm.invalid" type="submit" (click)="save()" class="btn btndefult btn-primary">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

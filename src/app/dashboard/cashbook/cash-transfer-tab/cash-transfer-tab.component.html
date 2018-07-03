@@ -1,0 +1,74 @@
+<form class="CashAmountTransfer" #cashAmountTransfer="ngForm">
+    <div class="form-group row">
+      <label for="cashbookName" class="col-sm-2 col-form-label">Cashbook Name</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="cashbookName" name="cashbookName" [(ngModel)]="cashTransferReq.cashbookName"
+          #cashbookName="ngModel" required>
+          <option value="select" disabled selected>---select---</option>
+          <option *ngFor="let item of cbNames" value="{{item.name}}">{{item.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="accountType" class="col-sm-2 col-form-label">Account Type</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="accountType" name="accountType" [(ngModel)]="cashTransferReq.accountType" #accountType="ngModel"
+          required>
+          <option>Credit</option>
+          <option>Debit</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="nameOfAcc" class="col-sm-2 col-form-label">Name Of Acc</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="nameOfAcc" name="nameOfAcc" [(ngModel)]="cashTransferReq.nameOfAccount" #nameOfAcc="ngModel"
+          required>
+          <option value="select" disabled selected>---select---</option>
+          <option *ngFor="let item of nameOfAccounts" value="{{item.nameOfAccount}}">{{item.nameOfAccount}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="subAccount" class="col-sm-2 col-form-label">Sub Acc</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="subAccount" name="subAccount" [(ngModel)]="cashTransferReq.subAccount" #subAccount="ngModel"
+          required>
+          <option value="select" disabled selected>---select---</option>
+          <option *ngFor="let item of subAccounts" value="{{item.subAccount}}">{{item.subAccount}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="bankName" class="col-sm-2 col-form-label">Bank Name</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="bankName" name="bankName" [(ngModel)]="cashTransferReq.bankName" #bankName="ngModel"
+          required>
+          <option value="select" disabled selected>---select---</option>
+          <option *ngFor="let item of bankNames" value="{{item.bankName}}">{{item.bankName}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="amount" class="col-sm-2 col-form-label">Amount</label>
+      <div class="col-sm-10">
+        <input class="form-control form-control-lg" id="amount" type="number" name="amount" [(ngModel)]="cashTransferReq.amount" #amount="ngModel"
+          required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="amount" class="col-sm-2 col-form-label">Date</label>
+      <div class="col-sm-10">
+        <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" id="fromDate" name="fromDate" [(ngModel)]="cashTransferReq.date"
+          #fromDate="ngModel" required>
+        <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+      </div>
+    </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button [disabled]="cashAmountTransfer.invalid" type="submit" (click)="save()" class="btn btndefult btn-primary">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

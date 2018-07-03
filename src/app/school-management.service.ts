@@ -15,6 +15,7 @@ import { school } from './classes';
   providedIn: 'root'
 })
 export class SchoolManagementService {
+
   //Custom Varialble
   selectedrole: school.role;  
   selectedpermission: school.permission;
@@ -665,11 +666,33 @@ export class SchoolManagementService {
     return this.http.get(this.APIuri + 'cashbooks/bankname').map(res => res.json());
   }
   
-  addCashbook(cashbook){
+  addCashbook(cashbook) {
     var body = JSON.stringify(cashbook);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Post, headers: headerOptions });
     return this.http.post(this.APIuri + 'cashbooks', body, requestOptions).map(res => res.json());
+  }
+
+  addLedger(ledger){
+    var body = JSON.stringify(ledger);
+    var headerOptions = new Headers({ 'Content-Type': 'application/json' });
+    var requestOptions = new RequestOptions({ method: RequestMethod.Post, headers: headerOptions });
+    return this.http.post(this.APIuri + 'cashbooks/ledgers', body, requestOptions).map(res => res.json());
+  }
+
+  addNameOfAccounts(nameOfAccounts) {
+    var body = JSON.stringify(nameOfAccounts);
+    var headerOptions = new Headers({ 'Content-Type': 'application/json' });
+    var requestOptions = new RequestOptions({ method: RequestMethod.Post, headers: headerOptions });
+    return this.http.post(this.APIuri + 'cashbooks/nameofaccounts', body, requestOptions).map(res => res.json());
+  }
+
+  getLedgers() {
+    return this.http.get(this.APIuri + 'cashbooks/ledgers').map(res => res.json());
+  }
+
+  getNameOfAccounts() {
+    return this.http.get(this.APIuri + 'cashbooks/nameofaccounts').map(res => res.json());
   }
 
     getCashbookReport(cashbookReportReq){
@@ -679,4 +702,11 @@ export class SchoolManagementService {
     return this.http.post(this.APIuri + 'cashbooks/report', body, requestOptions).map(res => res.json());
   }
 
+  getSubAccounts(): any {
+    throw new Error("Method not implemented.");
+  }
+
+  getBankNames(): any {
+    throw new Error("Method not implemented.");
+  }
 }

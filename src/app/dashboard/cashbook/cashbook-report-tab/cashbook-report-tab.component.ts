@@ -55,9 +55,11 @@ export class CashbookReportTabComponent implements OnInit {
       factor = 365;
     }
 
-    fromDate.setDate(toDate.getDate() - factor);
-    this.cashbookReportReq.fromDate = fromDate;
-    this.cashbookReportReq.toDate = toDate;
+    if (reportType !== 'option4'){
+      fromDate.setDate(toDate.getDate() - factor);
+      this.cashbookReportReq.fromDate = fromDate;
+      this.cashbookReportReq.toDate = toDate;
+    }
 
     this.schoolService.getCashbookReport(this.cashbookReportReq).subscribe(data => {
       if (data) {
