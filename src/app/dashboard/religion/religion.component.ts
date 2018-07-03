@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReligionComponent implements OnInit {
 
+  currentState
   constructor() { }
 
   ngOnInit() {

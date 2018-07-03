@@ -7,12 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionsTabComponent implements OnInit {
   transactionReq;
-
+  cbNames;
+  nameOfAccounts;
+  subAccounts;
+  bankNames;
   constructor() { 
     this.transactionReq = {};
   }
 
   ngOnInit() {
+  }
+
+  save(){
+    
   }
 
 }
