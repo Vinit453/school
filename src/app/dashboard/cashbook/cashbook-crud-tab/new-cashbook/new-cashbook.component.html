@@ -1,25 +1,105 @@
 <form class="cashbookForm" #cashbookForm="ngForm">
   <div class="form-group row">
-    <label for="cashbookName" class="col-sm-2 col-form-label">Cashbook Name</label>
+    <label for="entryType" class="col-sm-2 col-form-label">Create New </label>
     <div class="col-sm-10">
-      <input class="form-control form-control-lg" id="cashbookName" name="cashbookName" [(ngModel)]="data.name" #cashbookName="ngModel" required>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="bankName" class="col-sm-2 col-form-label">Bank Name</label>
-    <div class="col-sm-10">
-      <input class="form-control form-control-lg" id="bankName" name="bankName" [(ngModel)]="data.bankName" #bankName="ngModel" required>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="accountType" class="col-sm-2 col-form-label">Account Type</label>
-    <div class="col-sm-10">
-      <select class="form-control form-control-lg" id="accountType" name="accountType" [(ngModel)]="data.accountType" #accountType="ngModel" required>
-        <option>SAVING</option>
-        <option>CURRENT</option>
+      <select class="form-control form-control-lg" id="entryType" name="entryType" [(ngModel)]="entryType" #varEntryType="ngModel" required>
+        <option value="Cashbook">Cashbook</option>
+        <option value="NameOfAcc">Name of Acc.</option>
+        <option value="Ledger">Ledger</option>
       </select>
     </div>
   </div>
+
+  <div *ngIf="entryType=='Cashbook'">
+    <div class="form-group row">
+      <label for="cashbookName1" class="col-sm-2 col-form-label">Cashbook Name</label>
+      <div class="col-sm-10">
+        <input class="form-control form-control-lg" id="cashbookName1" name="cashbookName1" [(ngModel)]="cashbookReq.name" #cashbookName1="ngModel"
+          required>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="entryType=='Ledger'">
+    <div class="form-group row">
+      <label for="cashbookName2" class="col-sm-2 col-form-label">Cashbook Name</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="cashbookName2" name="cashbookName2" [(ngModel)]="legderReq.cashbookName" #cashbookName2="ngModel"
+          required>
+          <option value="select" disabled selected>---select---</option>
+          <option *ngFor="let item of cbNames" value="{{item.name}}">{{item.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="accountType2" class="col-sm-2 col-form-label">Account Type</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="accountType2" name="accountType2" [(ngModel)]="legderReq.accountType" #accountType2="ngModel"
+          required>
+          <option>Credit</option>
+          <option>Debit</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="nameOfAcc2" class="col-sm-2 col-form-label">Name Of Acc</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="nameOfAcc2" name="nameOfAcc2" [(ngModel)]="legderReq.nameOfAccount"
+          #nameOfAcc3="ngModel" required>
+          <option value="select" disabled selected>---select---</option>
+          <option *ngFor="let item of nameOfAccounts" value="{{item.nameOfAccount}}">{{item.nameOfAccount}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="transactionType2" class="col-sm-2 col-form-label">Transaction Type</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="transactionType2" name="transactionType2" [(ngModel)]="legderReq.transactionType"
+          #transactionType2="ngModel" required>
+          <option>Direct</option>
+          <option>Indirect</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="entryType=='NameOfAcc'">
+    <div class="form-group row">
+      <label for="nameOfAcc3" class="col-sm-2 col-form-label">Name of Acc</label>
+      <div class="col-sm-10">
+        <input class="form-control form-control-lg" id="nameOfAcc3" name="nameOfAcc3" [(ngModel)]="nameOfAccReq.nameOfAccount" #nameOfAcc3="ngModel"
+          required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="cashbookName3" class="col-sm-2 col-form-label">Cashbook Name</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="cashbookName3" name="cashbookName3" [(ngModel)]="nameOfAccReq.cashbookName"
+          #cashbookName3="ngModel" required>
+          <option value="select" disabled selected>---select---</option>
+          <option *ngFor="let item of cbNames" value="{{item.name}}">{{item.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="accountType3" class="col-sm-2 col-form-label">Account Type</label>
+      <div class="col-sm-10">
+        <select class="form-control form-control-lg" id="accountType3" name="accountType3" [(ngModel)]="nameOfAccReq.accountType" #accountType3="ngModel"
+          required>
+          <option>Credit</option>
+          <option>Debit</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="subAcc3" class="col-sm-2 col-form-label">Sub Acc</label>
+      <div class="col-sm-10">
+        <input class="form-control form-control-lg" id="subAcc3" name="subAcc3" [(ngModel)]="nameOfAccReq.subAccount" #subAcc3="ngModel"
+          required>
+      </div>
+    </div>
+  </div>
+
   <div class="form-group row">
     <div class="col-sm-10">
       <button [disabled]="cashbookForm.invalid" type="submit" (click)="save()" class="btn btndefult btn-primary">
