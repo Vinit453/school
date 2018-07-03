@@ -1,3 +1,21 @@
-<p>
-  country works!
-</p>
+<div class="row">
+  <ul class="tabs list-inline country">
+    <li class="tab firstTab">
+      <a [routerLink]="['countrytab']" [ngClass]="{'active': currentState == 'countrytab', 'inactive': currentState != 'countrytab'}"
+        (click)="currentState = 'countrytab'">Country</a>
+    </li>
+    <li class="tab">
+      <a [routerLink]="['statetab']" [ngClass]="{'active': currentState == 'statetab', 'inactive': currentState != 'statetab'}"
+        (click)="currentState = 'statetab'">State</a>
+    </li>
+    <li class="tab">
+      <a [routerLink]="['districttab']" [ngClass]="{'active': currentState == 'districttab', 'inactive': currentState != 'districttab'}"
+        (click)="currentState = 'districttab'">District</a>
+    </li>
+    <li class="tab">
+      <a [routerLink]="['talukatab']" [ngClass]="{'active': currentState == 'talukatab', 'inactive': currentState != 'talukatab'}"
+        (click)="currentState = 'talukatab'">Taluka</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

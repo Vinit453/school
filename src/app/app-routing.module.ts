@@ -89,7 +89,15 @@ import { FeeComponent } from './dashboard/fee/fee.component';
 import { FeeBankDetailsComponent } from './dashboard/fee/fee-bank-details/fee-bank-details.component';
 import { FeeCollectionComponent } from './dashboard/fee/fee-collection/fee-collection.component';
 import { ChallanComponent } from './dashboard/fee/challan/challan.component';
-
+import { CountryTabComponent } from './dashboard/country/country-tab/country-tab.component';
+import { StateTabComponent } from './dashboard/country/state-tab/state-tab.component';
+import { DistrictTabComponent } from './dashboard/country/district-tab/district-tab.component';
+import { TalukaTabComponent } from './dashboard/country/taluka-tab/taluka-tab.component';
+import { ReligionComponent } from './dashboard/religion/religion.component';
+import { ReligionTabComponent } from './dashboard/religion/religion-tab/religion-tab.component';
+import { CasteTabComponent } from './dashboard/religion/caste-tab/caste-tab.component';
+import { SubcasteTabComponent } from './dashboard/religion/subcaste-tab/subcaste-tab.component';
+import { CategoryTabComponent } from './dashboard/religion/category-tab/category-tab.component';
 
 //Routing
 const routes: Routes = [
@@ -108,7 +116,23 @@ const routes: Routes = [
       { path: 'cast/:id', component: CastFormComponent },
       { path: 'category', component: CategoryComponent },
       { path: 'category/:id', component: CategoryFormComponent },
-      { path: 'country', component: CountryComponent },
+      {
+        path: 'Country', component: CountryComponent,
+        children: [
+          { path: 'countrytab', component: CountryTabComponent },
+          { path: 'statetab', component: StateTabComponent },
+          { path: 'districttab', component: DistrictTabComponent },
+          { path: 'talukatab', component: TalukaTabComponent }
+        ] },
+      {
+        path: 'Religion', component: ReligionComponent,
+        children: [
+          { path: 'religiontab', component: ReligionTabComponent },
+          { path: 'castetab', component: CasteTabComponent },
+          { path: 'subcastetab', component: SubcasteTabComponent },
+          { path: 'categorytab', component: CategoryTabComponent }
+        ]
+      },
       { path: 'country/:id', component: CountryFormComponent },
       { path: 'district', component: DistrictComponent },
       { path: 'district/:id', component: DistrictFormComponent },

@@ -123,6 +123,15 @@ import { FeeComponent } from './dashboard/fee/fee.component';
 import { FeeCollectionComponent } from './dashboard/fee/fee-collection/fee-collection.component';
 import { FeeBankDetailsComponent } from './dashboard/fee/fee-bank-details/fee-bank-details.component';
 import { ChallanComponent } from './dashboard/fee/challan/challan.component';
+import { CountryTabComponent } from './dashboard/country/country-tab/country-tab.component';
+import { StateTabComponent } from './dashboard/country/state-tab/state-tab.component';
+import { DistrictTabComponent } from './dashboard/country/district-tab/district-tab.component';
+import { TalukaTabComponent } from './dashboard/country/taluka-tab/taluka-tab.component';
+import { ReligionComponent } from './dashboard/religion/religion.component';
+import { ReligionTabComponent } from './dashboard/religion/religion-tab/religion-tab.component';
+import { CasteTabComponent } from './dashboard/religion/caste-tab/caste-tab.component';
+import { SubcasteTabComponent } from './dashboard/religion/subcaste-tab/subcaste-tab.component';
+import { CategoryTabComponent } from './dashboard/religion/category-tab/category-tab.component';
 
 // import {  } from './d;
 
@@ -217,7 +226,16 @@ import { ChallanComponent } from './dashboard/fee/challan/challan.component';
     FeeComponent,
     FeeCollectionComponent,
     FeeBankDetailsComponent,
-    ChallanComponent
+    ChallanComponent,
+    CountryTabComponent,
+    StateTabComponent,
+    DistrictTabComponent,
+    TalukaTabComponent,
+    ReligionComponent,
+    ReligionTabComponent,
+    CasteTabComponent,
+    SubcasteTabComponent,
+    CategoryTabComponent
   ],
   imports: [
     BrowserModule,
