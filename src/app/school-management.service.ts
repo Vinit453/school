@@ -18,7 +18,7 @@ export class SchoolManagementService {
   //Custom Varialble
   selectedrole: school.role;  
   selectedpermission: school.permission;
-  private APIuri = 'http://159.65.89.101:3000/api/';
+  private APIuri = 'http://localhost:3000/api/';
   constructor(private http: Http) { }
   
   //-----------------------------------
@@ -55,11 +55,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(role);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'roles/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'roles/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleterole(id) {  
-    return this.http.delete(this.APIuri + 'departments/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'departments/' + id).map(res => res.json());
   }
 
   //--------------------------------------- 
@@ -79,11 +79,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'permissions/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'permissions/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletepermission(id) {  
-    return this.http.delete(this.APIuri + 'permissions/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'permissions/' + id).map(res => res.json());
   }
 
     //--------------------------------------- 
@@ -103,11 +103,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'academicYears/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'academicYears/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteacadmicyear(id) {  
-    return this.http.delete(this.APIuri + 'academicYears/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'academicYears/' + id).map(res => res.json());
   }
 
   //--------------------------------------- 
@@ -127,11 +127,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'admissions/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'admissions/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteAdmissionList(id) {  
-    return this.http.delete(this.APIuri + 'admissions/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'admissions/' + id).map(res => res.json());
   }
 
   //--------------------------------------- 
@@ -151,11 +151,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'admissionTypes/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'admissionTypes/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteAdmissionType(id) {  
-    return this.http.delete(this.APIuri + 'admissionTypes/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'admissionTypes/' + id).map(res => res.json());
   }
 
   //--------------------------------------- 
@@ -175,11 +175,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'castes/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'castes/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteCast(id) {  
-    return this.http.delete(this.APIuri + 'castes/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'castes/' + id).map(res => res.json());
   }
 
   //--------------------------------------- 
@@ -199,11 +199,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'categories/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'categories/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletecategories(id) {  
-    return this.http.delete(this.APIuri + 'categories/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'categories/' + id).map(res => res.json());
   }
 
   //--------------------------------------- 
@@ -223,11 +223,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'country/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'country/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletecountry(id) {  
-    return this.http.delete(this.APIuri + 'country/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'country/' + id).map(res => res.json());
   }
 
   //--------------------------------------- 
@@ -247,11 +247,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'districts/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'districts/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletedistricts(id) {  
-    return this.http.delete(this.APIuri + 'districts/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'districts/' + id).map(res => res.json());
   }
 
     //--------------------------------------- 
@@ -271,11 +271,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'divisions/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'divisions/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletedivisions(id) {  
-    return this.http.delete(this.APIuri + 'divisions/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'divisions/' + id).map(res => res.json());
   }
 
   //--------------------------------------- 
@@ -295,11 +295,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'institudes/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'institudes/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteinstitudes(id) {  
-    return this.http.delete(this.APIuri + 'institudes/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'institudes/' + id).map(res => res.json());
   }
 
  //occupations
@@ -318,11 +318,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'occupations/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'occupations/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteoccupations(id) {  
-    return this.http.delete(this.APIuri + 'occupations/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'occupations/' + id).map(res => res.json());
   }
 
    //religions
@@ -341,11 +341,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'religions/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'religions/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletereligions(id) {  
-    return this.http.delete(this.APIuri + 'religions/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'religions/' + id).map(res => res.json());
   }
 
    //sanstha
@@ -364,11 +364,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'sanstha/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'sanstha/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletesanstha(id) {  
-    return this.http.delete(this.APIuri + 'sanstha/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'sanstha/' + id).map(res => res.json());
   }
 
   //schools
@@ -387,11 +387,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'schools/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'schools/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteschools(id) {  
-    return this.http.delete(this.APIuri + 'schools/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'schools/' + id).map(res => res.json());
   }
 
   //schoolCastes
@@ -410,11 +410,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'schoolCastes/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'schoolCastes/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteschoolCastes(id) {  
-    return this.http.delete(this.APIuri + 'schoolCastes/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'schoolCastes/' + id).map(res => res.json());
   }
 
   //schoolCategories
@@ -433,11 +433,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'schoolCategories/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'schoolCategories/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteschoolCategories(id) {  
-    return this.http.delete(this.APIuri + 'schoolCategories/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'schoolCategories/' + id).map(res => res.json());
   }
 
   //schoolReligions
@@ -456,11 +456,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'schoolReligions/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'schoolReligions/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteschoolReligions(id) {  
-    return this.http.delete(this.APIuri + 'schoolReligions/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'schoolReligions/' + id).map(res => res.json());
   }
 
   //schoolSections
@@ -479,11 +479,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'schoolSections/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'schoolSections/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteschoolSections(id) {  
-    return this.http.delete(this.APIuri + 'schoolSections/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'schoolSections/' + id).map(res => res.json());
   }
 
   //schoolSubcastes
@@ -502,11 +502,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'schoolSubcastes/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'schoolSubcastes/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteschoolSubcastes(id) {  
-    return this.http.delete(this.APIuri + 'schoolSubcastes/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'schoolSubcastes/' + id).map(res => res.json());
   }
 
   //class
@@ -525,11 +525,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'class/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'class/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteclass(id) {  
-    return this.http.delete(this.APIuri + 'class/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'class/' + id).map(res => res.json());
   }
 
   //sections
@@ -548,11 +548,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'sections/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'sections/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletesections(id) {  
-    return this.http.delete(this.APIuri + 'sections/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'sections/' + id).map(res => res.json());
   }
 
   //states
@@ -571,11 +571,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'states/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'states/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletestates(id) {  
-    return this.http.delete(this.APIuri + 'states/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'states/' + id).map(res => res.json());
   }
 
   //subcastes
@@ -594,11 +594,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'subcastes/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'subcastes/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletesubcastes(id) {  
-    return this.http.delete(this.APIuri + 'subcastes/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'subcastes/' + id).map(res => res.json());
   }
 
 
@@ -618,11 +618,11 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'talukas/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'talukas/' + id, body, requestOptions).map(res => res.json());
   }
 
   deletetalukas(id) {  
-    return this.http.delete(this.APIuri + 'talukas/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'talukas/' + id).map(res => res.json());
   }
 
   //users
@@ -641,15 +641,15 @@ export class SchoolManagementService {
     var body = JSON.stringify(permission);
     var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Patch, headers: headerOptions });
-    return this.http.patch(this.APIuri + 'users/ID' + id, body, requestOptions).map(res => res.json());
+    return this.http.patch(this.APIuri + 'users/' + id, body, requestOptions).map(res => res.json());
   }
 
   deleteusers(id) {  
-    return this.http.delete(this.APIuri + 'users/ID' + id).map(res => res.json());
+    return this.http.delete(this.APIuri + 'users/' + id).map(res => res.json());
   }
 
   getUserById(id) {
-    return this.http.get(this.APIuri+'users/Id' + id).map(res => res.json());
+    return this.http.get(this.APIuri+'users/' + id).map(res => res.json());
   }
 
   //cashbook

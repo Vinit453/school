@@ -230,6 +230,10 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     MomentModule,
     AngularFontAwesomeModule
   ],
+  entryComponents:[
+    SansthaFormComponent,
+    SectionFormComponent
+  ],
   providers: [
     SchoolManagementService,
     RoleServiceService,

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="page-header">
       <span><h5>Sanstha <span class="pull-right">
-          <button class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit" ><fa name="plus-square"></fa></button>
+          <button (click)="create()" class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit" ><fa name="plus-square"></fa></button>
          </span></h5>
         
     </span>
@@ -32,8 +32,8 @@
         {{item.sanstha_created_date | amTimeAgo}}
     </div>
     <div class="col-sm-3 col-md-3">
-        <button class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit" ><fa name="edit"></fa></button>
-        <button class="btn btn-danger btn-sm reduce-padding" data-title="Delete" data-toggle="modal" data-target="#delete" ><fa name="trash"></fa></button>
+        <button (click)="update(item)" class="btn btn-primary btn-sm reduce-padding" data-title="Edit" data-toggle="modal" data-target="#edit" ><fa name="edit"></fa></button>
+        <button (click)="delete(item)" class="btn btn-danger btn-sm reduce-padding" data-title="Delete" data-toggle="modal" data-target="#delete" ><fa name="trash"></fa></button>
     </div>
   </div>
 </div>

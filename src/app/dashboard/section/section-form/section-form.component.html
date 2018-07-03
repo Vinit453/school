@@ -1,3 +1,25 @@
-<p>
-  section-form works!
-</p>
+<div class="row">
+    <div class="col-sm-12">
+        <h5 style="text-align:center">Enter Details</h5>
+        <form class="menu-form" >
+            <div class="form-group col-sm-10">
+                <label class="control-label" for="section_name">Section Name</label>
+                <input class="form-control" name="section_name" [(ngModel)]="data.section_name" placeholder="section_name">
+            </div>
+          </form>
+          <div class="row">
+              <div class="col-sm-3">
+                  <button type="button" class="btn btndefult" (click)="save()" >
+                      Submit</button>
+              </div>
+              <div class="col-sm-3">
+                  <button type="button" class="btn btndefult" (click)="reset()">
+                      Reset</button>
+              </div>
+              <div class="col-sm-3">
+                  <button type="button" class="btn btndefult" (click)="onCloseCancel()">
+                      Cancel</button>
+              </div>
+          </div>
+    </div>
+</div>
